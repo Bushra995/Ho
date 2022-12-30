@@ -1,0 +1,35 @@
+<div class="uitk-l-grid">
+    <div class="uitk-l-grid__row">
+        <div class="uitk-l-grid__col--12">
+            <div uitkTableCaption>
+                <h1 id="table-caption">User Data</h1>
+            </div>
+            <div uitkTableContainer>
+                <table uitkTable [dataSource]="dataSource" id="basic-table">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let headerName of tableHeader" scope="col">
+                                {{ headerName }}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="patient-data">
+                        <ng-container *uitkTableRowRenderer="let user">
+                            <tr>
+            
+                                <td>{{ user.user_id}}</td>
+                                <td>{{ user.user_name }}</td>
+                                <td>{{ user.user_age }}</td>
+                                <td>{{ user.user_insurance_type }}</td>
+                                <td>{{ user.user_insurance_money}}</td>
+                                <td ><span class="uitk-icon uitk-icon-edit md-icon"></span></td>
+                                <td><button  (click)="deleteUser(user.user_id)"><span class="uitk-icon uitk-icon-trash_delete sm-icon"></span></button></td>
+
+                          </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

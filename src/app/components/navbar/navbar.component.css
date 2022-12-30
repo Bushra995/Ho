@@ -1,0 +1,9 @@
+.titleheader{
+    float:right; 
+    padding-left:1rem;
+    
+}
+.resizee {
+    width: 100px;
+    height: auto;
+}

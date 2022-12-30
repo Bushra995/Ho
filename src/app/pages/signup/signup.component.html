@@ -1,0 +1,115 @@
+<div  class="bootstrap-wrapper" class="text-center">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3" >
+              <div class="text-center">
+           <img  class =resize src="../../../assets/logo_bushra.PNG" alt="">
+               </div>
+              <h1 class="text-center"  class="highlight">Register here </h1>
+
+
+              <!-- {{user| json}} -->
+              <br>
+              <!-- {{age |json }} -->
+        
+                   <form  id="formm" (ngSubmit)="formSubmit()">
+                   
+              <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Your name</mat-label>
+                    <input   [(ngModel)]="user.user_name"
+                    name="user_name"
+                    matInput  placeholder="Name" id="name">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>User name must be unqiue </mat-hint>
+                  </mat-form-field>
+                </p>
+                <p>
+                  <mat-form-field appearance="outline">
+                      <mat-label>Enter Your Dob</mat-label>
+                      <input  [(ngModel)]="user_dobb.name" 
+                      name="user_dobb"
+                      matNativeControl type=date placeholder="Your DOB" id="age">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                      <mat-hint>password!</mat-hint>
+                  </mat-form-field>
+               </p>
+               <!--selector element -->
+             <p>
+              <mat-form-field appearance="outline">
+                  <mat-label>Select me</mat-label>
+                  <mat-select   [(ngModel)]="user.user_insurance_type" name="user_insurance_type">
+                    <mat-option value="Primary">primary</mat-option>
+                    <mat-option  value="Basic">Basic </mat-option>
+                    <mat-option value="Premium">Premium</mat-option>
+                  </mat-select>
+                  <mat-hint >select your Insurance type   ^</mat-hint>
+                </mat-form-field>
+             </p>
+             
+          
+            <!--Total insurNCE MONEY YOU WOULD LIKE TO DEPOSIT-->
+
+            
+            <p>
+              <mat-form-field appearance="outline">   
+                <mat-label>Your insurance Money you would like to deposit-</mat-label>
+                <input  [(ngModel)]="user.user_insurance_money"
+                name="user_insurance_money"
+                matInput placeholder="Insurance_money" id="Insurance_money" >
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-hint>Insurance Type</mat-hint>
+              </mat-form-field>
+            </p> 
+          
+          <!-- <div *ngIf="showDoctor" >
+              
+              <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Hospital id</mat-label>
+                    <input matInput placeholder="Hospital_id" id="hospital_id" ng-readonly="showUser">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>Hospital you are register to</mat-hint>
+                  </mat-form-field>
+                </p>
+
+                <p>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Doctor type</mat-label>
+                    <input matInput placeholder="Hospital_type" id="hospital_type" ng-readonly="showUser">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-hint>Your doctor type</mat-hint>
+                  </mat-form-field>
+                </p>
+          </div> -->
+
+
+              <p>
+              <mat-form-field appearance="outline">
+                  <mat-label>Enter your password</mat-label>
+                  <input [(ngModel)]="user.user_password"
+                  name="user_password"
+                   matInput [type]="hide ? 'password' : 'text'" id="password">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+              </p>
+         
+             <!-- {{user.user_age|json}} -->
+              
+          <!--Dummy codes-->
+          <!--end-->
+         <div class="container">
+          <!--submi button-->
+           <button mat-stroked-button color="warn">Submit</button>      
+              <!--clear button-->
+            <button style ='margin-left: 20px;' mat-raised-button color="warn"  (click)="onClear()">Clear</button>
+          </div>
+          </form>
+          </div>
+       </div>
+  </div>
+</div>
+
+

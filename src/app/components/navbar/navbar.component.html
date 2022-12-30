@@ -1,0 +1,65 @@
+<uitk-header>
+    <a class="uitk-c-header-skip-to-content-link" href="#main-content">skip to content</a>
+    <uitk-header-logo >
+        <img  class =resizee src="../../../assets/hospitall.png" alt="">
+    <h2  class="titleheader"> Hospital Claim Management System</h2>
+    </uitk-header-logo>
+</uitk-header>
+<!--navigation part-->
+<uitk-navigation-primary-horizontal>
+    <uitk-navigation-panel>
+        <uitk-navigation-panel-item>
+            <button uitkNavButton>
+                User Drop down 
+            </button>
+             <uitk-navigation-panel>
+                <uitk-navigation-panel-item>
+                    <a uitkNavRoute routerLink="/login">
+                        Login page
+                    </a>
+                </uitk-navigation-panel-item>
+                <uitk-navigation-panel-item>
+                    <a uitkNavRoute routerLink="/signup">
+                        Signup page
+                    </a>
+                </uitk-navigation-panel-item>
+            </uitk-navigation-panel>
+        </uitk-navigation-panel-item>
+        <!--second-->  
+        <uitk-navigation-panel-item>
+            <button uitkNavButton>
+                Hospital Drop Down
+            </button>
+            <uitk-navigation-panel>
+                <uitk-navigation-panel-item>
+                    <a uitkNavRoute routerLink="/view">
+                        view user
+                    </a>
+                </uitk-navigation-panel-item>
+                <!--second-->
+                <uitk-navigation-panel-item>
+                    <a uitkNavRoute routerLink="/hospital">
+                        view Hospital
+                    </a>
+                </uitk-navigation-panel-item>
+            </uitk-navigation-panel>
+        </uitk-navigation-panel-item>
+        <!--end of second drop down-->
+        <uitk-navigation-panel-item>
+            <a uitkNavRoute routerLink="/home">
+                Home
+            </a>
+        </uitk-navigation-panel-item>
+    </uitk-navigation-panel>
+</uitk-navigation-primary-horizontal>
+<!--end -->
+<main id="main-content" tabindex="-1" style="outline:none">
+    <div class="uitk-l-grid">
+        <div class="uitk-l-grid__row">
+            <div class="uitk-l-grid__col">
+                <!-- <h1>Dashboard</h1> -->
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</main>

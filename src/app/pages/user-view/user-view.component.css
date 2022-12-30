@@ -1,0 +1,23 @@
+/* table, th  {
+    border: 3px solid;
+    color: black;
+    text-decoration-color: black;
+
+    border-collapse: collapse;
+    text-align: center !important;
+  }
+  td{
+    border: 3px solid;
+    color: black;
+   background-color: whitesmoke;
+    border-collapse: collapse;
+    text-align: center !important;
+  }
+  .left {
+    float: left;
+    margin-left: 50px;
+}
+.right {
+    float: right;
+    margin-right: 20px;
+} */
