@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.text-center{
+    text-align: center;
+}
+.resize {
+    width: 100px;
+    height: auto;
+    outline: 2px solid black;
+    overflow: hidden;
+    border: 10px solid orange;
+    
+}
+h2,h3,h2, h4, h5,h6 {
+    text-shadow: 0pc;
+    color: rgb(255, 128, 0);
+    
+}
+h1{
+    color: orangered;
+}
+.highlight {
+    color:#fff;
+    background: rgb(224, 83, 31);
+    box-shadow:5px orangered;
+    padding: 5px 0;
+    text-align: center;
+}
+
+/*for table*/
+/* table, th  {
+    border: 3px solid;
+    color: black;
+    background-color: orangered;
+    border-collapse: collapse;
+    text-align: center !important;
+  }
+  td{
+    border: 3px solid;
+    color: black;
+    background-color: peachpuff;
+    border-collapse: collapse;
+    text-align: center !important;
+  } */
